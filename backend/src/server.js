@@ -10,10 +10,6 @@ app.use(express.json());
 // Routes
 app.use("/api/notes", noteRoutes);
 
-app.use((req, res) => {
-  res.status(404).send("Route not found");
-});
-
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
