@@ -13,3 +13,5 @@ app.use("/api/notes", noteRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// mongodb+srv://vyecyec7_db_user:mj9cfNBjgG9dGp3s@cluster0.bmz0vhw.mongodb.net/?appName=Cluster0
