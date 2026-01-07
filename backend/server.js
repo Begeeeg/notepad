@@ -1,13 +1,16 @@
 import express from "express";
+import noteRoutes from "./routes/noteRoutes.js";
 
 const app = express();
 const PORT = 5000;
 
-app.get("/api/notes", (req, res) => {
-  res.status(200).send("Here are your notes");
-});
+// Middleware to parse JSON
+app.use(express.json());
 
-app.get("/*", (req, res) => {
+// Routes
+app.use("/api/notes", noteRoutes);
+
+app.use((req, res) => {
   res.status(404).send("Route not found");
 });
 
