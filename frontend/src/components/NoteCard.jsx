@@ -1,6 +1,6 @@
 import { PenSquareIcon, Trash2Icon } from "lucide-react";
 import React from "react";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 import formatDate from "../lib/utils.jsx";
 import { axiosInstance } from "../lib/axiosInstance.jsx";
 import toast from "react-hot-toast";
@@ -23,7 +23,7 @@ export default function NoteCard({ note, setNotes }) {
 
   return (
     <Link
-      to={"/note/${note._id}"}
+      to={`/note/${note._id}`}
       className="card hover:shadow-lg transition-all duration-100 border-t-4 border-2 border-primary"
     >
       <div className="card-body">

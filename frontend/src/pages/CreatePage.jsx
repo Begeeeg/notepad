@@ -43,7 +43,7 @@ export default function CreatePage() {
   return (
     <div className="min-h-screen bg-base-400">
       <div className="container mx-auto px-4 py-8">
-        <div className="max-w-2xl max-auto">
+        <div className="max-w-2xl mx-auto">
           <Link to={"/"} className="btn btn-ghost mb-6">
             <ArrowLeftIcon className="size-5" /> Back to home
           </Link>
